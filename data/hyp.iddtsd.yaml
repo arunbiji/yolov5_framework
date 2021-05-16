@@ -1,0 +1,38 @@
+# Hyperparameters for VOC finetuning
+# python train.py --batch 64 --weights yolov5m.pt --data voc.yaml --img 512 --epochs 50
+# See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
+
+
+# Hyperparameter Evolution Results
+# Generations: 306 + 50 + 10
+#                   P         R     mAP.5 mAP.5:.95       box       obj       cls
+# Metrics:        
+
+lr0: 0.0036
+lrf: 0.11
+momentum: 0.85
+weight_decay: 0.0003
+warmup_epochs: 2.0
+warmup_momentum: 0.35
+warmup_bias_lr: 0.045
+box: 0.028
+cls: 0.25
+cls_pw: 0.625
+obj: 0.3
+obj_pw: 0.85
+iou_t: 0.2
+anchor_t: 3.0
+# anchors: 3.0
+fl_gamma: 0.0
+hsv_h: 0.013
+hsv_s: 0.73
+hsv_v: 0.42
+degrees: 0.1
+translate: 0.2
+scale: 0.45
+shear: 0.18
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.18
